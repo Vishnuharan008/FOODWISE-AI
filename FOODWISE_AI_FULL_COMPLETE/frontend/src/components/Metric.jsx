@@ -1,0 +1,1 @@
+export default function Metric({label,value,sub,icon:I}){return <div className="glass rounded-2xl p-5"><div className="flex justify-between text-xs uppercase tracking-widest text-slate-500"><span>{label}</span>{I&&<I size={17} className="text-cyan-300"/>}</div><div className="text-3xl font-semibold mt-3">{value}</div><div className="text-xs text-slate-500 mt-2">{sub}</div></div>}

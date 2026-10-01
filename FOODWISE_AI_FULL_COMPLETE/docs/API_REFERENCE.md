@@ -1,0 +1,9 @@
+# API
+GET /api/health
+GET /api/history
+GET /api/analytics
+GET /api/model-metrics
+POST /api/predict
+POST /api/waste-risk
+POST /api/simulate
+POST /api/retrain

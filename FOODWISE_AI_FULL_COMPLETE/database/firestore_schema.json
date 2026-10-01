@@ -1,0 +1,12 @@
+{
+ "users":{"name":"string","email":"string","role":"admin|manager|staff"},
+ "daily_records":{"date":"date","expected_attendance":"number","actual_attendance":"number","food_item":"string","prepared":"number","consumed":"number","remaining":"number","wasted":"number","holiday":"boolean","event":"boolean","exam":"boolean","temperature":"number","rain_probability":"number"},
+ "menus":{"menu_id":"string","date":"date","meal_type":"string","items":"array"},
+ "recipes":{"food_item":"string","ingredient":"string","quantity_per_portion":"number","unit":"string"},
+ "inventory":{"ingredient":"string","available":"number","unit":"string","reorder_level":"number"},
+ "predictions":{"date":"date","food_item":"string","predicted_demand":"number","range_low":"number","range_high":"number","recommended_preparation":"number","model_version":"string"},
+ "consumption_logs":{"timestamp":"datetime","food_item":"string","served":"number","consumed":"number","remaining":"number"},
+ "waste_records":{"date":"date","food_item":"string","quantity":"number","reason":"string","cost":"number"},
+ "model_metrics":{"model_version":"string","mae":"number","rmse":"number","mape":"number","trained_at":"datetime"},
+ "recommendations":{"created_at":"datetime","priority":"string","action":"string","reason":"string","status":"open|done"}
+}

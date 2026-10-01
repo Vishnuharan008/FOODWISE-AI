@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #e8f3f8;
+  background: #04070d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: 
+    radial-gradient(circle at 80% 0%, #064032 0, transparent 35%),
+    radial-gradient(circle at 10% 90%, #0d2b45 0, transparent 32%),
+    #04070d;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.gridbg {
+  background-image: 
+    linear-gradient(#ffffff06 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff06 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6), inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.panel {
+  background: #09121f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neon {
+  color: #34d399;
+}
+
+.glow {
+  box-shadow: 0 0 35px rgba(52, 211, 153, 0.25);
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040810;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.scanline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(260px);
+    opacity: 0;
+  }
+}

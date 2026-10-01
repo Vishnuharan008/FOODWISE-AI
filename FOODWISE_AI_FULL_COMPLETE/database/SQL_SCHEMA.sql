@@ -1,0 +1,10 @@
+CREATE TABLE users(id INTEGER PRIMARY KEY,name TEXT,email TEXT UNIQUE,role TEXT);
+CREATE TABLE daily_records(id INTEGER PRIMARY KEY,date TEXT,expected_attendance REAL,actual_attendance REAL,food_item TEXT,prepared REAL,consumed REAL,remaining REAL,wasted REAL,holiday INTEGER,event INTEGER,exam INTEGER,temperature REAL,rain_probability REAL);
+CREATE TABLE menus(id INTEGER PRIMARY KEY,date TEXT,meal_type TEXT,item_name TEXT,planned_quantity REAL);
+CREATE TABLE recipes(id INTEGER PRIMARY KEY,food_item TEXT,ingredient TEXT,quantity_per_portion REAL,unit TEXT);
+CREATE TABLE inventory(id INTEGER PRIMARY KEY,ingredient TEXT,available REAL,unit TEXT,reorder_level REAL);
+CREATE TABLE predictions(id INTEGER PRIMARY KEY,date TEXT,food_item TEXT,predicted_demand REAL,range_low REAL,range_high REAL,recommended_preparation REAL,model_version TEXT);
+CREATE TABLE consumption_logs(id INTEGER PRIMARY KEY,timestamp TEXT,food_item TEXT,served REAL,consumed REAL,remaining REAL);
+CREATE TABLE waste_records(id INTEGER PRIMARY KEY,date TEXT,food_item TEXT,quantity REAL,reason TEXT,cost REAL);
+CREATE TABLE model_metrics(id INTEGER PRIMARY KEY,model_version TEXT,mae REAL,rmse REAL,mape REAL,trained_at TEXT);
+CREATE TABLE recommendations(id INTEGER PRIMARY KEY,created_at TEXT,priority TEXT,action TEXT,reason TEXT,status TEXT);
